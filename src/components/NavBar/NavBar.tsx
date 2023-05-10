@@ -6,16 +6,16 @@ const NavBar: React.FC = () => {
     return (
         <StyledList>
             <StyledListItem>
-                <StyledNavLink to='/be-in-touch-frontend/users/me'>Моя страница</StyledNavLink>
+                <StyledNavLink to='/users/me'>Моя страница</StyledNavLink>
             </StyledListItem>
             <StyledListItem>
-                <StyledNavLink to='/be-in-touch-frontend/friends'>Друзья</StyledNavLink>
+                <StyledNavLink to='/friends'>Друзья</StyledNavLink>
             </StyledListItem>
             <StyledListItem>
-                <StyledNavLink to='/be-in-touch-frontend/feed'>Лента</StyledNavLink>
+                <StyledNavLink to='/feed'>Лента</StyledNavLink>
             </StyledListItem>
             <StyledListItem>
-                <StyledNavLink to='/be-in-touch-frontend/users'>Люди</StyledNavLink>
+                <StyledNavLink to='/users'>Люди</StyledNavLink>
             </StyledListItem>
         </StyledList>
     );

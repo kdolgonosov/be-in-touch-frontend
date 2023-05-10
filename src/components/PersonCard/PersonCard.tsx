@@ -27,7 +27,7 @@ const PersonCard: React.FC<IPersonCard> = ({
     handleAddFriend,
     handleDeleteFriend,
 }: IPersonCard) => {
-    const path = '/be-in-touch-frontend/users/' + user._id;
+    const path = '/users/' + user._id;
     return (
         <Container>
             <Wrapper to={path} replace={true}>
