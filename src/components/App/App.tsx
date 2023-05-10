@@ -34,7 +34,7 @@ const App: React.FC = () => {
                 console.log('Ошибка');
             } else {
                 console.log('res', res);
-                navigate('be-in-touch-frontend/signin');
+                navigate('/signin');
             }
         });
     };
@@ -45,7 +45,7 @@ const App: React.FC = () => {
             .then((res) => {
                 if (res === undefined) {
                     setLoggedIn(true);
-                    navigate('be-in-touch-frontend/feed');
+                    navigate('/feed');
                 }
                 // setLoginError(true);
             })
@@ -63,7 +63,7 @@ const App: React.FC = () => {
             })
             .catch((err) => {
                 setLoggedIn(false);
-                // navigate('/signin');
+                navigate('/signin');
             });
     }, [loggedIn]);
     return (
