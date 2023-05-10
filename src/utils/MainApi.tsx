@@ -148,7 +148,7 @@ class MainApi {
     }
 }
 
-const mainApi = new MainApi('https://be-in-touch.vercel.app/');
+const mainApi = new MainApi('https://be-in-touch.vercel.app');
 // const mainApi = new MainApi('http://localhost:3000/');
 
 export default mainApi;
