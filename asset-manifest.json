@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/be-in-touch-frontend/static/css/main.e6c13ad2.css",
-    "main.js": "/be-in-touch-frontend/static/js/main.51899121.js",
+    "main.js": "/be-in-touch-frontend/static/js/main.f8bfe8a6.js",
     "index.html": "/be-in-touch-frontend/index.html",
     "main.e6c13ad2.css.map": "/be-in-touch-frontend/static/css/main.e6c13ad2.css.map",
-    "main.51899121.js.map": "/be-in-touch-frontend/static/js/main.51899121.js.map"
+    "main.f8bfe8a6.js.map": "/be-in-touch-frontend/static/js/main.f8bfe8a6.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.51899121.js"
+    "static/js/main.f8bfe8a6.js"
   ]
 }
