@@ -102,7 +102,7 @@ const App: React.FC = () => {
                         }
                     />
                     <Route
-                        path='/be-in-touch-frontendusers/me'
+                        path='/be-in-touch-frontend/users/me'
                         element={
                             <ProtectedRoute loggedIn={loggedIn}>
                                 <MyProfile />
