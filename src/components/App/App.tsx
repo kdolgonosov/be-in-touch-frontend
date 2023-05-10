@@ -2,7 +2,7 @@ import './styles.tsx';
 import { Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-dom';
 
 import { FormEvent, useState, useEffect, Dispatch, SetStateAction } from 'react';
-import NotFound from '../../NotFound/NotFound';
+import NotFound from '../NotFound/NotFound';
 import NavBar from '../NavBar/NavBar';
 import SignUp from '../SignUp/SignUp';
 import SignIn from '../SIgnIn/SignIn';
