@@ -5,6 +5,6 @@ interface IProtectedRouteProps {
     children: JSX.Element;
 }
 const ProtectedRoute: React.FC<IProtectedRouteProps> = ({ loggedIn, children }) => {
-    return loggedIn === true ? children : <Navigate to='/signin' replace />;
+    return loggedIn === true ? children : <Navigate to='/be-in-touch-frontend/signin' replace />;
 };
 export default ProtectedRoute;

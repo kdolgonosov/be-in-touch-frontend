@@ -70,10 +70,11 @@ const App: React.FC = () => {
         <CurrentUserContext.Provider value={{ currentUser, setCurrentUser }}>
             <GlobalStyle />
             <PageContainer>
-                {location.pathname !== '/signin' && location.pathname !== '/signup' && <NavBar />}
+                {location.pathname !== '/be-in-touch-frontend/signin' &&
+                    location.pathname !== '/be-in-touch-frontend/signup' && <NavBar />}
                 <Routes>
                     <Route
-                        path='/signup'
+                        path='/be-in-touch-frontend/signup'
                         element={
                             <ReversedProtectedRoute loggedIn={loggedIn}>
                                 <SignUp onSignUp={handleSignUp} />
@@ -81,7 +82,7 @@ const App: React.FC = () => {
                         }
                     />
                     <Route
-                        path='/signin'
+                        path='/be-in-touch-frontend/signin'
                         element={
                             <ReversedProtectedRoute loggedIn={loggedIn}>
                                 <SignIn onSignIn={handleSignIn} />
@@ -89,7 +90,7 @@ const App: React.FC = () => {
                         }
                     />
                     <Route
-                        path='/users'
+                        path='/be-in-touch-frontend/users'
                         element={
                             <ProtectedRoute loggedIn={loggedIn}>
                                 <People />
@@ -97,7 +98,7 @@ const App: React.FC = () => {
                         }
                     />
                     <Route
-                        path='users/me'
+                        path='/be-in-touch-frontendusers/me'
                         element={
                             <ProtectedRoute loggedIn={loggedIn}>
                                 <MyProfile />
@@ -105,7 +106,7 @@ const App: React.FC = () => {
                         }
                     />
                     <Route
-                        path='users/:userId'
+                        path='/be-in-touch-frontendusers/:userId'
                         element={
                             <ProtectedRoute loggedIn={loggedIn}>
                                 <UserProfile />
@@ -113,7 +114,7 @@ const App: React.FC = () => {
                         }
                     />
                     <Route
-                        path='/feed'
+                        path='/be-in-touch-frontend/feed'
                         element={
                             <ProtectedRoute loggedIn={loggedIn}>
                                 <Feed />
@@ -122,7 +123,7 @@ const App: React.FC = () => {
                     />
 
                     <Route
-                        path='/friends'
+                        path='/be-in-touch-frontend/friends'
                         element={
                             <ProtectedRoute loggedIn={loggedIn}>
                                 <Friends />
