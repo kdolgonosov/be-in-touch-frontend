@@ -18,7 +18,6 @@ import { CurrentUserContext } from '../../utils/CurrentUserContext';
 import { PageContainer } from './styles';
 import { IUser } from '../../interfaces/interfaces';
 import GlobalStyle from '../../styles/global';
-import { UserInfo } from '../MyProfile/styles';
 import UserProfile from '../UserProfile/UserProfile';
 
 const App: React.FC = () => {
@@ -47,10 +46,8 @@ const App: React.FC = () => {
                     setLoggedIn(true);
                     navigate('/feed', { replace: true });
                 }
-                // setLoginError(true);
             })
             .catch((err) => {
-                // setLoginError(true)
                 console.log('err', err);
             });
     };
@@ -133,14 +130,7 @@ const App: React.FC = () => {
                             </ProtectedRoute>
                         }
                     />
-                    <Route
-                        path='/notfound'
-                        element={
-                            // <ProtectedRoute loggedIn={loggedIn}>
-                            <NotFound />
-                            // </ProtectedRoute>
-                        }
-                    />
+                    <Route path='/notfound' element={<NotFound />} />
                 </Routes>
             </PageContainer>
         </CurrentUserContext.Provider>

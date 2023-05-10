@@ -5,19 +5,6 @@ import PersonCard from '../PersonCard/PersonCard';
 import { IUser } from '../../interfaces/interfaces';
 import { Container, StyledTitle, StyledList, StyledListItem } from './styles';
 
-// interface IUser {
-//     _id: string;
-//     email: string;
-//     password: string;
-//     name: string;
-//     surname?: string;
-//     age?: number;
-//     avatar?: URL;
-//     city?: string;
-//     university?: string;
-//     friends?: string[];
-// }
-
 const Friends: React.FC = () => {
     const currentUserCtx = useContext(CurrentUserContext);
     const [friends, setFriends] = useState<IUser[] | []>([]);

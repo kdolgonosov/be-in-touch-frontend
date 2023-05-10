@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate, NavLink } from 'react-router-dom';
-import mainApi from '../../utils/MainApi';
+import { useNavigate } from 'react-router-dom';
 import {
     Container,
     StyledForm,
@@ -25,22 +24,10 @@ const SignUp: React.FC<ISignUpProps> = ({ onSignUp }) => {
         university: '',
         avatar: '',
     });
-    let navigate = useNavigate();
     const handleFormDataChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
         setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
     };
-    // const handleSignUp = (e: React.FormEvent) => {
-    //     e.preventDefault();
-    //     mainApi.signUp(email, password, name).then((res) => {
-    //         if (res === false) {
-    //             console.log('Ошибка');
-    //         } else {
-    //             console.log('res', res);
-    //             navigate('/signin');
-    //         }
-    //     });
-    // };
     const handleSignUp = (e: React.FormEvent) => {
         e.preventDefault();
         onSignUp(e, formData);
@@ -104,7 +91,6 @@ const SignUp: React.FC<ISignUpProps> = ({ onSignUp }) => {
                 <StyledParagraph>
                     Уже зарегистрированы? <StyledNavLink to='/signin'>Войти</StyledNavLink>
                 </StyledParagraph>
-                {/* <NavLink to='/signup'>Уже зарегистрированы?</NavLink> */}
             </StyledForm>
         </Container>
     );

@@ -1,6 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { Container, StyledList, StyledListItem, StyledNavLink } from './styles';
+import { StyledList, StyledListItem, StyledNavLink } from './styles';
 
 const NavBar: React.FC = () => {
     return (

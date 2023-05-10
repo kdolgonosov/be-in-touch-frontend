@@ -1,6 +1,5 @@
 import { useContext, useState } from 'react';
 
-import { IUser } from '../../interfaces/interfaces';
 import { StyledForm, StyledInput, StyledButton } from './styles';
 import { CurrentUserContext } from '../../utils/CurrentUserContext';
 import mainApi from '../../utils/MainApi';
@@ -67,20 +66,6 @@ const EditProfileForm: React.FC<IEditProfileForm> = ({ onSaveChanges }) => {
                 value={userData?.avatar}
                 placeholder='Ссылка на изображение профиля'
             ></StyledInput>
-            {/* <StyledInput
-                type='email'
-                // onChange={handleFormDataChange}
-                name='email'
-                // value={currentUserCtx?.currentUser?.email}
-                placeholder='Email'
-            ></StyledInput>
-            <StyledInput
-                type='password'
-                // onChange={handleFormDataChange}
-                name='password'
-                // value={currentUserCtx?.currentUser?.password}
-                placeholder='Пароль'
-            ></StyledInput> */}
             <StyledButton type='submit'>Сохранить изменения</StyledButton>
         </StyledForm>
     );

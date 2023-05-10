@@ -1,15 +1,6 @@
 import styled from 'styled-components';
-import { NavLink, Link } from 'react-router-dom';
-// #484d51
-// #818d97
-// #8facc0
-// #d2e4f1
+import { Link } from 'react-router-dom';
 
-// #141414
-// #222222
-// #333333
-// #555555
-// #fff = #e1e3e6
 export const Container = styled.div`
     display: flex;
     flex-direction: row;

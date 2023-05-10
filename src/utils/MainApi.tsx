@@ -146,60 +146,8 @@ class MainApi {
             }).then((res) => this.getResponseData(res));
         }
     }
-    // addMovie({
-    //     country,
-    //     director,
-    //     duration,
-    //     year,
-    //     description,
-    //     image,
-    //     trailerLink,
-    //     thumbnail,
-    //     movieId,
-    //     nameRU,
-    //     nameEN,
-    // }) {
-    //     return fetch(`${this._baseUrl}/movies`, {
-    //         method: 'POST',
-    //         headers: { ...this._headers, Authorization: `Bearer ${localStorage.getItem('jwt')}` },
-    //         body: JSON.stringify({
-    //             country,
-    //             director,
-    //             duration,
-    //             year,
-    //             description,
-    //             image,
-    //             trailerLink,
-    //             thumbnail,
-    //             movieId,
-    //             nameRU,
-    //             nameEN,
-    //         }),
-    //     }).then((res) => this._getResponseData(res));
-    // }
-    // deleteMovie(movieId) {
-    //     return fetch(`${this._baseUrl}/movies/${movieId}`, {
-    //         method: 'DELETE',
-    //         headers: { ...this._headers, Authorization: `Bearer ${localStorage.getItem('jwt')}` },
-    //     }).then((res) => this._getResponseData(res));
-    // }
-    // getSavedMovies() {
-    //     return fetch(`${this._baseUrl}/movies`, {
-    //         method: 'GET',
-    //         headers: { ...this._headers, Authorization: `Bearer ${localStorage.getItem('jwt')}` },
-    //     }).then((res) => {
-    //         return this._checkRequestStatus(res);
-    //     });
-    // }
 }
-// let myHeaders = new Headers([['Content-Type', 'application/json']]);
-// myHeaders.append('Accept', 'application/json');
 
-const mainApi = new MainApi(
-    // url моего бэка
-    // baseUrl: 'http://api.movies-explorer.kd.nomoredomains.xyz',
-    'http://localhost:3001',
-    // myHeaders,
-);
+const mainApi = new MainApi('http://localhost:3001');
 
 export default mainApi;

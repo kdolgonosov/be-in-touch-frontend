@@ -4,14 +4,13 @@ import AddPostForm from '../AddPostForm/AddPostForm';
 import PostCard from '../PostCard/PostCard';
 import mainApi from '../../utils/MainApi';
 import { CurrentUserContext } from '../../utils/CurrentUserContext';
-import { IPost, IUser } from '../../interfaces/interfaces';
+import { IPost } from '../../interfaces/interfaces';
 import {
     Container,
     Wrapper,
     Avatar,
     UserInfo,
     StyledName,
-    StyledTitle,
     StyledParagraph,
     ActionButton,
     SecondActionButton,
@@ -19,9 +18,7 @@ import {
     StyledListItem,
 } from './styles';
 
-// MdOutlinePostAdd
 import { MdOutlinePostAdd } from 'react-icons/md';
-import { Navigate, useNavigate, useParams } from 'react-router-dom';
 
 const MyProfile: React.FC = () => {
     const currentUserCtx = useContext(CurrentUserContext);
@@ -66,14 +63,7 @@ const MyProfile: React.FC = () => {
         <>
             <Container>
                 <Wrapper>
-                    <Avatar
-                        // src={
-                        //     currentUserCtx?.currentUser?.avatar
-                        //         ? currentUserCtx?.currentUser?.avatar
-                        //         : 'https://www.seekpng.com/png/detail/110-1100707_person-avatar-placeholder.png'
-                        // }
-                        src={currentUserCtx?.currentUser?.avatar}
-                    ></Avatar>
+                    <Avatar src={currentUserCtx?.currentUser?.avatar}></Avatar>
 
                     <UserInfo>
                         <StyledName>

@@ -1,14 +1,6 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
-// #484d51
-// #818d97
-// #8facc0
-// #d2e4f1
 
-// #141414
-// #222222
-// #333333
-// #555555
 export const Container = styled.div`
     margin: 0 auto;
     max-width: 450px;

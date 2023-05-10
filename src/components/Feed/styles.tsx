@@ -1,15 +1,4 @@
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
-// #484d51
-// #818d97
-// #8facc0
-// #d2e4f1
-
-// #141414
-// #222222
-// #333333
-// #555555
-// #fff = #e1e3e6
 export const Container = styled.div`
     margin: 0 auto;
     max-width: 600px;
@@ -39,7 +28,3 @@ export const StyledListItem = styled.li`
     background-color: #555555;
     margin-bottom: 35px;
 `;
-
-// font-size: 24px;
-// padding: 10px;
-// border-radius: 10px;

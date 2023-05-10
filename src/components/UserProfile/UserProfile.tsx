@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from 'react';
-import { Navigate, useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import PostCard from '../PostCard/PostCard';
 import mainApi from '../../utils/MainApi';
 import { CurrentUserContext } from '../../utils/CurrentUserContext';
@@ -11,10 +11,8 @@ import {
     Avatar,
     UserInfo,
     StyledName,
-    StyledTitle,
     StyledParagraph,
     ActionButton,
-    SecondActionButton,
     StyledList,
     StyledListItem,
     NoPostsPlaceholder,
@@ -35,7 +33,6 @@ const UserProfile = () => {
                     mainApi.getUserPosts(userId).then((posts) => setPosts(posts));
                 })
                 .finally(() => setLoading(false));
-        // mainApi.getMyPosts().then((res) => setPosts(res));
     }, []);
     const handleLikePost = (post: IPost, isLiked: boolean) => {
         mainApi.changeLikeCardStatus(post._id, isLiked).then((newPost) => {
@@ -82,9 +79,6 @@ const UserProfile = () => {
                     ) : (
                         <ActionButton onClick={handleAddFriend}>Добавить в друзья</ActionButton>
                     )}
-                    {/* <SecondActionButton>
-                        <MdOutlinePostAdd />
-                    </SecondActionButton> */}
                 </Wrapper>
             </Container>
             <Container>

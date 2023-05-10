@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext, useReducer } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { CurrentUserContext } from '../../utils/CurrentUserContext';
 import mainApi from '../../utils/MainApi';
 import PersonCard from '../PersonCard/PersonCard';
@@ -12,18 +12,6 @@ import {
     StyledButton,
     SearchBarWrapper,
 } from './style';
-
-// interface IUser {
-//     _id: string;
-//     email: string;
-//     password: string;
-//     name: string;
-//     surname?: string;
-//     age?: number;
-//     city?: string;
-//     university?: string;
-//     friends?: string[];
-// }
 
 const People: React.FC = () => {
     const currentUserCtx = useContext(CurrentUserContext);

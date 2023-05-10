@@ -54,26 +54,6 @@ export const ActionButton = styled.button`
     }
 `;
 
-export const SecondActionButton = styled.button`
-    grid-area: 2 / 3 / 3 / 4;
-    margin-right: 15px;
-    border: 0;
-    height: 45px;
-    width: 45px;
-    background-color: #555555;
-    font-size: 36px;
-    color: #e1e3e6;
-    &:hover {
-        background-color: #666666;
-        cursor: pointer;
-    }
-`;
-export const StyledTitle = styled.h1`
-    font-size: 24px;
-    color: #e1e3e6;
-    text-align: center;
-    margin-bottom: 20px;
-`;
 export const StyledList = styled.ul`
     display: flex;
     flex-direction: column;

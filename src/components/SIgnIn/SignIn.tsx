@@ -1,7 +1,4 @@
 import { useState } from 'react';
-import { useNavigate, NavLink } from 'react-router-dom';
-
-import mainApi from '../../utils/MainApi';
 import {
     Container,
     StyledForm,
@@ -18,7 +15,6 @@ interface ISignInProps {
 const SignIn: React.FC<ISignInProps> = ({ onSignIn }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    let navigate = useNavigate();
 
     const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setEmail(e.target.value);
