@@ -45,7 +45,7 @@ const App: React.FC = () => {
             .then((res) => {
                 if (res === undefined) {
                     setLoggedIn(true);
-                    navigate('/feed');
+                    navigate('/feed', { replace: true });
                 }
                 // setLoginError(true);
             })
