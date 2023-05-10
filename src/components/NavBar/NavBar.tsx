@@ -9,7 +9,7 @@ const NavBar: React.FC = () => {
                 <StyledNavLink to='/be-in-touch-frontend/users/me'>Моя страница</StyledNavLink>
             </StyledListItem>
             <StyledListItem>
-                <StyledNavLink to='/be-in-touch-frontend/friends'>Друзьяzz</StyledNavLink>
+                <StyledNavLink to='/be-in-touch-frontend/friends'>Друзья</StyledNavLink>
             </StyledListItem>
             <StyledListItem>
                 <StyledNavLink to='/be-in-touch-frontend/feed'>Лента</StyledNavLink>

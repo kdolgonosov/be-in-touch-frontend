@@ -11,22 +11,6 @@ import {
 } from './styles';
 import { IUser } from '../../interfaces/interfaces';
 
-// interface IUser {
-//     _id: string;
-//     email: string;
-//     password: string;
-//     name: string;
-//     surname?: string;
-//     age?: number;
-//     avatar?: URL;
-//     city?: string;
-//     university?: string;
-//     friends?: string[];
-// }
-// interface IPersonCard extends IUser {
-//     handleDeleteFriend: () => void;
-// }
-
 interface IPersonCard {
     user: IUser;
     isFriend: boolean;
@@ -43,7 +27,7 @@ const PersonCard: React.FC<IPersonCard> = ({
     handleAddFriend,
     handleDeleteFriend,
 }: IPersonCard) => {
-    const path = '/users/' + user._id;
+    const path = 'be-in-touch-frontend/users/' + user._id;
     return (
         <Container>
             <Wrapper to={path} replace={true}>

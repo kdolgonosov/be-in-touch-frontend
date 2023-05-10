@@ -1,5 +1,5 @@
 import './styles.tsx';
-import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import { Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-dom';
 
 import { FormEvent, useState, useEffect, Dispatch, SetStateAction } from 'react';
 import NavBar from '../NavBar/NavBar';
@@ -34,7 +34,7 @@ const App: React.FC = () => {
                 console.log('Ошибка');
             } else {
                 console.log('res', res);
-                navigate('/signin');
+                navigate('be-in-touch-frontend/signin');
             }
         });
     };
@@ -45,7 +45,7 @@ const App: React.FC = () => {
             .then((res) => {
                 if (res === undefined) {
                     setLoggedIn(true);
-                    navigate('/feed');
+                    navigate('be-in-touch-frontend/feed');
                 }
                 // setLoginError(true);
             })
@@ -73,6 +73,10 @@ const App: React.FC = () => {
                 {location.pathname !== '/be-in-touch-frontend/signin' &&
                     location.pathname !== '/be-in-touch-frontend/signup' && <NavBar />}
                 <Routes>
+                    <Route
+                        path='/be-in-touch-frontend'
+                        element={<Navigate to='/be-in-touch-frontend/feed' />}
+                    />
                     <Route
                         path='/be-in-touch-frontend/signup'
                         element={
