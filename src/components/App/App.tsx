@@ -2,10 +2,11 @@ import './styles.tsx';
 import { Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-dom';
 
 import { FormEvent, useState, useEffect, Dispatch, SetStateAction } from 'react';
+import NotFound from '../../NotFound/NotFound';
 import NavBar from '../NavBar/NavBar';
 import SignUp from '../SignUp/SignUp';
 import SignIn from '../SIgnIn/SignIn';
-import Profile from '../MyProfile/MyProfile';
+import MyProfile from '../MyProfile/MyProfile';
 import Feed from '../Feed/Feed';
 import People from '../People/People';
 import Friends from '../Friends/Friends';
@@ -17,7 +18,6 @@ import { CurrentUserContext } from '../../utils/CurrentUserContext';
 import { PageContainer } from './styles';
 import { IUser } from '../../interfaces/interfaces';
 import GlobalStyle from '../../styles/global';
-import MyProfile from '../MyProfile/MyProfile';
 import { UserInfo } from '../MyProfile/styles';
 import UserProfile from '../UserProfile/UserProfile';
 
@@ -70,8 +70,11 @@ const App: React.FC = () => {
         <CurrentUserContext.Provider value={{ currentUser, setCurrentUser }}>
             <GlobalStyle />
             <PageContainer>
-                {location.pathname !== '/signin' && location.pathname !== '/signup' && <NavBar />}
+                {location.pathname !== '/signin' &&
+                    location.pathname !== '/signup' &&
+                    location.pathname !== '/notfound' && <NavBar />}
                 <Routes>
+                    <Route path='*' element={<Navigate to='/notfound' />} />
                     <Route path='/' element={<Navigate to='/feed' />} />
                     <Route
                         path='/signup'
@@ -128,6 +131,14 @@ const App: React.FC = () => {
                             <ProtectedRoute loggedIn={loggedIn}>
                                 <Friends />
                             </ProtectedRoute>
+                        }
+                    />
+                    <Route
+                        path='/notfound'
+                        element={
+                            // <ProtectedRoute loggedIn={loggedIn}>
+                            <NotFound />
+                            // </ProtectedRoute>
                         }
                     />
                 </Routes>
